@@ -66,3 +66,11 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+## AUTH STEPS
+
+<ul>
+    <li>Click on submit button : LOGIN_REQUEST</li>
+    <li>Call action dispatch from mapDispatchToProps -> AuthReducer.js</li>
+    <li> </li>
+</ul>
