@@ -1,18 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from './pages/App.js';
 import * as serviceWorker from './serviceWorker';
 
 console.log(`${process.env.REACT_APP_NAME} ${process.env.REACT_APP_VERSION}`)
 
-const root = document.getElementById('root');
+ReactDOM.render(<App />, document.getElementById('root'));
 
-if(root !== null) {
-    ReactDOM.render(
-        <App />,
-        root
-    );
-}
 
 
 // If you want your app to work offline and load faster, you can change
