@@ -1,0 +1,30 @@
+@import 'elements/variables';
+
+body {
+    background: url('../images/bg-ironman.jpg');
+}
+
+
+
+.stark-form {
+    input, input:-internal-autofill-selected {
+        background-color: #000 !important;
+        border-bottom: $white !important;
+        color: $white;
+        box-shadow: #000;
+    }
+    
+    label {
+        color: $white;
+    }
+
+    h1 {
+        font-size: 30px;
+        background: $mainColor;
+        padding: 30px 15px;
+        color: $white
+    }
+    .card {
+        background: rgba(0, 0, 0, .4);
+    }
+}
