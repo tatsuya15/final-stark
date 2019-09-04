@@ -67,10 +67,13 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
-## Materialiaze CSS
+## BOOTSTRAP
 
-### Using MaterializeCSS with ReactJS
-<a href="http://fullstackhybrid.com/using-materializecss-with-reactjs/">Read more</a>
+### Using scss resources
+
+## REDUX
+
+### Use redux saga for managing ASYNC call
 
 
 ## AUTH STEPS

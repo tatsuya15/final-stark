@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 import App from './pages/App.js';
 import * as serviceWorker from './serviceWorker';
 
-console.log(`${process.env.REACT_APP_NAME} ${process.env.REACT_APP_VERSION}`)
-
 ReactDOM.render(<App />, document.getElementById('root'));
 
 

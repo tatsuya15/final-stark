@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
-import Auth from '../auth';
+import authService from '../../services/authService';
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
     console.log("props", rest);
@@ -8,7 +8,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
         <Route
             {...rest}
             render={props =>
-                Auth.isAuthenticated ? (
+                authService.isAuthenticated ? (
                     <Component {...props} />
                 ) : (
                         <Redirect

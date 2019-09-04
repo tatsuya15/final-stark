@@ -1,28 +1,36 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
+import { ConnectedRouter } from 'connected-react-router';
 import Login from './Login';
 import Home from './Home';
 import Error404 from './404';
 import PrivateRoute from '../components/routes/PrivateRoute';
-import 'materialize-css/dist/css/materialize.min.css';
 import '../assets/scss/index.scss';
+
+import { Provider } from 'react-redux';
+import  configureStore, { history } from '../store';
+
+const store = configureStore();
+
+
+console.log(`${process.env.name} ${process.env.REACT_APP_VERSION}`)
 
 class App extends Component {
 
 	render() {
 		return (
-			<Router>
-				<div className="App">
-					<Switch>
-						<Route exact path="/" component={Login} />
-						<PrivateRoute path="/home" component={Home} />
+			<Provider store={store}>
+				<ConnectedRouter history={history}>
+					<div className="App router-container">
+						<Switch>
+							<Route exact path="/" component={Login} />
+							<PrivateRoute path="/home" component={Home} />
+							<Route component={Error404} />
+						</Switch>
 
-						<Route component={Error404} />
-					</Switch>
-
-				</div>
-			</Router>
-
+					</div>
+				</ConnectedRouter>
+			</Provider>
 		);
 	}
 

@@ -1,0 +1,66 @@
+.stark-card {
+  background: transparent;
+  color: $white;
+
+  .card-header,
+  .card-footer {
+    font-size: 40px;
+    text-align: right;
+    background: $mainColorOpacity;
+    color: $white;
+  }
+
+  .card-header {
+    .logo {
+      position: absolute;
+      width: 100%;
+      top: -30px;
+      left: -80px;
+    }
+  }
+
+  .card-body {
+    background: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.hexagons {
+  opacity: 0;
+  text-align: center;
+    color: #000;
+  font-size: 52px;
+  font-size: 4.1rem;
+  letter-spacing: -0.2em;
+  line-height: 0.7;
+  position: absolute;
+  text-shadow: 0 0 2px $lightBeam;
+  top: 310px;
+  width: 100%;
+  z-index: -3;
+  animation: floor-entry 1.5s ease-out forwards, floor-light 4s ease-out infinite;
+  span {
+    width: 10%;
+  }
+}
+
+@keyframes floor-entry {
+  from {
+    transform: perspective(600px) rotateX(0deg) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(600px) rotateX(60deg) scale(1.4);
+  }
+}
+
+@keyframes floor-light {
+  from {
+    text-shadow: 0 0 2px $lightBeam;
+  }
+  50% {
+    text-shadow: 0 0 8px $lightBeam;
+  }
+  to {
+    text-shadow: 0 0 2px $lightBeam;
+  }
+}
