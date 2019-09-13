@@ -1,0 +1,24 @@
+.icon-stark {
+  position: absolute;
+  top: 6px;
+  right: -30px;
+  height: 30px;
+  width: 30px;
+  background: url("../../images/svg/arc_1.svg") no-repeat;
+  background-size: cover;
+  transition: right 0.5s;
+  //transform: rotate(0deg);
+  transform-origin: center center;
+}
+
+li.item:hover {
+    .icon-stark {
+        right: 0;
+        //animation: zoom 0.5s ease ;
+    }
+}
+
+@keyframes zoom {
+    from {transform: scale(1);}
+    to   {transform: scale(2);}
+}

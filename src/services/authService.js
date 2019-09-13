@@ -3,7 +3,7 @@ import * as types from '../constants/actionTypes/auth';
 
 const authService = {
 
-    isAuthenticated: false,
+    isAuthenticated: true, //TODO : false
 
     addToken(token, tokenType, expiresAt) {
         console.log('set token', this);

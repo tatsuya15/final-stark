@@ -3,7 +3,6 @@ import { Route, Redirect } from 'react-router-dom';
 import authService from '../../services/authService';
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
-    console.log("props", rest);
     return (
         <Route
             {...rest}

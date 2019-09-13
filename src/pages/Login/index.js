@@ -130,15 +130,6 @@ class Login extends Component {
                         </div>
                     </div>
                 </div>
-
-                <div className="container-fluid mt-10">
-                    {this.props.users &&
-                        this.test()
-                    }
-                    {this.props.currentUser &&
-                        this.card()
-                    }
-                </div>
             </React.Fragment>
 
 
