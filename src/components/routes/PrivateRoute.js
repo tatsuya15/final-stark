@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import authService from '../../services/authService';
+import Layout from '../layouts/Layout';
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
     return (
@@ -8,7 +9,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
             {...rest}
             render={props =>
                 authService.isAuthenticated ? (
-                    <Component {...props} />
+                    <Layout {...props} Component={Component}/>
                 ) : (
                         <Redirect
                             to={{

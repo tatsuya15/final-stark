@@ -22,3 +22,33 @@ li.item:hover {
     from {transform: scale(1);}
     to   {transform: scale(2);}
 }
+
+
+.icon-grid {
+    width: 32px;
+}
+
+.icon-btn {
+    cursor: pointer;
+    transition: all 0.5s;
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.icon-grid-s {
+    width: 25px;
+}
+
+.icon-grid-xs {
+    width: 12px;
+}
+
+.icon-cancel {
+    margin-left: 10px;
+}
+
+.icon-arrow {
+    transition: all 0.5s;
+    margin-right: 10px;
+}

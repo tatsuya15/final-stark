@@ -76,10 +76,12 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ### Use redux saga for managing ASYNC call
 
 
-## AUTH STEPS
+## And this will produce a flow chart:
 
-<ul>
-    <li>Click on submit button : LOGIN_REQUEST</li>
-    <li>Call action dispatch from mapDispatchToProps -> AuthReducer.js</li>
-    <li> </li>
-</ul>
+```mermaid
+graph LR
+A[Square Rect] -- Link text --> B((Circle))
+A --> C(Round Rect)
+B --> D{Rhombus}
+C --> D
+

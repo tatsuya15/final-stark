@@ -2,9 +2,9 @@ import React from 'react';
 
 const Error404 = () => {
     return (
-        <div>
+        <React.Fragment>
             <h1>Page not found : Error 404</h1>
-        </div>
+        </React.Fragment>
     )
 }
 

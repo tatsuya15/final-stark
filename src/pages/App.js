@@ -3,7 +3,9 @@ import { Route, Switch } from "react-router-dom";
 import { ConnectedRouter } from 'connected-react-router';
 import Login from './Login';
 import Home from './Home';
+import Team from './Team';
 import Applications from './Applications';
+import Users from './Users';
 import Error404 from './404';
 import PrivateRoute from '../components/routes/PrivateRoute';
 import '../assets/scss/index.scss';
@@ -27,6 +29,8 @@ class App extends Component {
 							<Route exact path="/" component={Login} />
 							<PrivateRoute path="/home" component={Home} />
 							<PrivateRoute path="/applications" component={Applications} />
+							<PrivateRoute path="/team" component={Team} />
+							<PrivateRoute path="/users" component={Users} />
 							<Route component={Error404} />
 						</Switch>
 

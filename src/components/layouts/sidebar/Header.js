@@ -7,7 +7,6 @@ const Header = (props) => {
     const [arrowState, setArrowState] = useState(ARROW_UP);
 
     function handleMenu(e) {
-        console.log('test fch =' + arrowState);
         setArrowState(arrowState === ARROW_UP ? ARROW_DOWN : ARROW_UP);
         props.handleClick(e);
     }

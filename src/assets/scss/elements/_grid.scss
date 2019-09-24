@@ -1,0 +1,61 @@
+thead {
+  tr {
+    background-color: $gridHeader;
+    th:last-child {
+      //border-right: 10px solid $gridHeader;
+    }
+  }
+}
+
+tbody {
+  tr {
+    //transition: background-color 1s ease, color 1s ease;
+    &.main-line:hover {
+      background-color: $dark;
+      //color:$dark;
+      text-shadow: 1px 1px 1px $dark;
+
+      .icon-grid {
+        box-shadow: 1px 1px 1px $dark;
+      }
+    }
+
+    &.main-line {
+      cursor: pointer;
+    }
+
+    &.sub-line {
+      background-color: $dark;
+    }
+
+    td:last-child {
+      //border-right: 10px solid $cityLights;
+    }
+  }
+
+  tr.line-edit {
+    color: $editColor;
+    -webkit-touch-callout: none;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+}
+
+tr.expanded {
+  .icon-arrow {
+    transform: rotate(180deg);
+  }
+}
+
+ul.applications-counter {
+  li {
+    display: inline;
+    margin-right: 30px;
+    .counter {
+        font-weight: 700;
+        color: $eggBlue;
+    }
+  }
+}

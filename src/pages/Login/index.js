@@ -98,10 +98,13 @@ class Login extends Component {
         return (
             <React.Fragment>
                 <div className="container">
+                    {/* <div>
+                        {this.test()}
+                    </div> */}
                     <div className="row">
                         <div className="col col-lg-6 mx-auto mt-7">
                             <form id="formLogin" onSubmit={e => this.handleSubmit(e)}>
-                                <div className="card stark-card shadow-sm">
+                                <div className="card stark-card">
                                     <div className="card-header">
                                         <img src={LogoSVG} alt="LOGO" className="logo" />
                                         <span>&nbsp;</span>

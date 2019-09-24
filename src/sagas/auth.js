@@ -8,6 +8,7 @@ import axios from 'axios';
 
 
 const login = (email, password, rememberme) => {
+
     return axios({
         method: 'post',
         url: API_URI + '/login',
@@ -20,7 +21,9 @@ const login = (email, password, rememberme) => {
 };
 
 export function* workerLogin(payload) {
+
     try {
+
         const response = yield call(login, payload.email, payload.password, payload.remember);
         const token = response.data.token;
         const account = response.data.account;
@@ -35,7 +38,6 @@ export function* workerLogin(payload) {
 
 
     } catch (error) {
-        console.log('ERROR LOGIN FAILURE');
         yield put({ type: types.LOGIN_FAILURE, error });
     }
 }

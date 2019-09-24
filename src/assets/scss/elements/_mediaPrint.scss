@@ -1,0 +1,9 @@
+@media print {
+  .no-print,
+  .sidebar,
+  #stark-sidebar,
+  .no-print * {
+    display: none !important;
+    visibility: hidden;
+  }
+}

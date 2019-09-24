@@ -1,4 +1,4 @@
-import { call, put, select, takeLatest } from 'redux-saga/effects'
+import { call, put, takeLatest } from 'redux-saga/effects'
 import { getListUsers, getUserById } from './api/apiTest';
 
 
@@ -7,7 +7,6 @@ export function* workerGetListUsers(action) {
         const response = yield call(getListUsers);
         const users = response.data;
 
-        console.log('SUCCESS ???');
         yield put({ type: 'TEST_USERS_SUCCESS', users });
 
     } catch (error) {
@@ -20,7 +19,6 @@ export function* workerGetUserById(action) {
         const response = yield call(getUserById, action.idUser);
         const currentUser = response.data;
 
-        console.log('SUCCESS ???');
         yield put({ type: 'TEST_USER_SUCCESS', currentUser });
         
     } catch (error) {

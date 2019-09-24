@@ -2,7 +2,11 @@
   transition: all 300ms ease-in-out;
 
   &:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 }
 
+.btn-outline-dark {
+  color: $white;
+  border-color: $white;
+}
