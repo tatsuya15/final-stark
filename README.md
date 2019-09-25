@@ -85,3 +85,6 @@ A --> C(Round Rect)
 B --> D{Rhombus}
 C --> D
 
+
+react-draft-wysiwyg
+react-multiselect-checkboxes
