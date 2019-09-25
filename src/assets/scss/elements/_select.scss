@@ -1,0 +1,41 @@
+.select-stark {
+    text-transform:Capitalize;
+
+    .css-1rhbuit-multiValue  div {
+        color: $white;
+        border:1px solid $white;
+    }
+
+    * {
+        background: $dark;
+        color: $white;
+        // border:1px solid $eggBlue;
+    }
+
+    .css-1uccc91-singleValue {
+        color: $white;
+        
+    }
+
+    .css-yk16xz-control {
+        border:1px solid $eggBlue;
+        &:focus {
+            border:1px solid $white;
+        }
+    }
+
+    .css-26l3qy-menu {
+        z-index: 10001;
+        border:1px solid #000;
+    }
+
+    .css-1n7v3ny-option {
+        background: $white;
+        color: $dark;
+    }
+
+    .css-9gakcf-option {
+        background: $eyeNewt;
+    }
+    
+}

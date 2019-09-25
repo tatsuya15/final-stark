@@ -17,8 +17,6 @@ class Applications extends Component {
         }
     }
 
-    state
-
     render() {
 
         const { applications } = this.props;

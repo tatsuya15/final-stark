@@ -10,3 +10,12 @@
   color: $white;
   border-color: $white;
 }
+
+.btn-primary {
+  background-color: $eyeNewt;
+  border: 1px solid $eyeNewt;
+  &:hover {
+    background-color: $eyeNewt;
+    border: 1px solid $eyeNewt;
+  }
+}
