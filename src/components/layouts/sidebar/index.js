@@ -16,6 +16,10 @@ const menus = [
                 title: 'squads',
                 route: 'squads'
             },
+            {
+                title: 'CMDB',
+                route: 'cmdb'
+            },
 
 
         ]
@@ -28,13 +32,16 @@ const menus = [
                 route: 'applications',
                 authorization: ['webmaster']
             },
+        ]
+    },
+    {
+        group: 'Testing',
+        links: [
             {
-                title: 'servers',
-                route: 'servers',
-                authorization: ['webmaster']
+                title: 'Business rules',
+                route: 'businessRules',
+                authorization: ['tester']
             },
-
-
         ]
     },
     {
@@ -43,6 +50,11 @@ const menus = [
             {
                 title: 'users',
                 route: 'users',
+                authorization: ['admin']
+            },
+            {
+                title: 'licenses',
+                route: 'licenses',
                 authorization: ['admin']
             }
         ]

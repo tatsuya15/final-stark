@@ -1,0 +1,11 @@
+export const GET_BR_REQUEST = 'GET_BR_REQUEST';
+export const GET_BR_SUCCESS = 'GET_BR_SUCCESS';
+export const GET_BR_ERROR = 'GET_BR_ERROR';
+
+export const UPDATE_BR_REQUEST = 'UPDATE_BR_REQUEST';
+export const UPDATE_BR_SUCCESS = 'UPDATE_BR_SUCCESS';
+export const UPDATE_BR_ERROR = 'UPDATE_BR_ERROR';
+
+export const ADD_BR_REQUEST = 'ADD_BR_REQUEST';
+export const ADD_BR_SUCCESS = 'ADD_BR_SUCCESS';
+export const ADD_BR_ERROR = 'ADD_BR_ERROR';

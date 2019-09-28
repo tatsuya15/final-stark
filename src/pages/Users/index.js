@@ -11,6 +11,10 @@ import Select from 'react-select';
 
 class Users extends Component {
 
+    state = {
+        isUserFormDisplayed: false
+    }
+
     componentDidMount() {
         this.props.getUsersList();
 
@@ -21,6 +25,10 @@ class Users extends Component {
 
     onChangeFilter = (e) => {
         console.log(e);
+    }
+
+    handleDisplayUserForm = (e) => {
+        this.setState({ isUserFormDisplayed: !this.state.isUserFormDisplayed });
     }
 
     render() {
@@ -51,7 +59,11 @@ class Users extends Component {
                                         options={this.props.commonData.jobs} />
                                 </div>
                                 <div className="col-md-3 mb-3">
-                                    <button className="btn btn-outline-dark ml-2" type="button">Add</button>
+                                    <button
+                                        className="btn btn-primary ml-2"
+                                        type="button"
+                                        onClick={(e) => this.handleDisplayUserForm(e)}
+                                    >Add a new user</button>
                                 </div>
                             </div>
                         </nav>
@@ -60,6 +72,7 @@ class Users extends Component {
                 <FormUser
                     addUser={this.props.addUser}
                     commonData={this.props.commonData}
+                    isDisplayed={this.state.isUserFormDisplayed}
                 />
 
                 <div className="row p-3">
@@ -77,10 +90,12 @@ class Users extends Component {
     }
 }
 
-const mapStateToProps = state => ({
-    users: state.dataUser.users,
-    commonData: state.commonData.commonData
-});
+const mapStateToProps = (state, props) => {
+    return {
+        users: state.dataUser.users,
+        commonData: state.commonData.commonData
+    }
+};
 
 const mapDispatchToProps = dispatch => ({
     getUsersList: () => dispatch(getUsersList()),

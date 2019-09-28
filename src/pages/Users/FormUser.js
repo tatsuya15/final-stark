@@ -39,10 +39,12 @@ class FormUser extends Component {
 
     render() {
         let { jobs, teams } = this.props.commonData !== null ? this.props.commonData : {};
+        const classDisplayedForm = this.props.isDisplayed ? '' : 'collapse';
+
 
         return (
             <div className="container-fluid">
-                <form className="form-stark" onSubmit={(e) => this.handleSubmit(e)}>
+                <form className={`form-stark ${classDisplayedForm}`} onSubmit={(e) => this.handleSubmit(e)}>
                     <h2>Add a new user</h2>
                     <div className="form-row">
                         <div className="col-md-4 mb-3">

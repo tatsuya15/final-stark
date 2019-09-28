@@ -1,0 +1,114 @@
+.container-team {
+
+  div.card {
+    background-color:$cardColor;
+    box-shadow: 0 8px 16px rgba(black, 0.45);
+
+    div.card-img-container {
+      overflow: hidden;
+      position: relative;
+      background-color: #262626;
+    }
+
+    div.card-img {
+      transition: 0.45s ease all;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: url("https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/zz70403f67.jpg");
+      background-position: center center;
+      background-size: 150%;
+      height: 280px;
+      padding: 30px;
+      color: white;
+      // filter: grayscale(100%);
+      // -webkit-filter: grayscale(100%);
+      // -moz-filter: grayscale(100%);
+      // -ms-filter: grayscale(100%);
+      // -o-filter: grayscale(100%);
+
+      span {
+        position: relative;
+        -webkit-font-smoothing: antialiased;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 14px;
+      }
+
+      h2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 8px 10px;
+        width: 100%;
+        background: rgba(45, 52, 54, 0.7);
+        text-align: left;
+        -webkit-font-smoothing: antialiased;
+        font-weight: normal;
+        text-transform: uppercase;
+      }
+    }
+
+    div.card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 300px;
+
+      ul.bullet {
+        padding: 0px 22px;
+        list-style-type: square;
+        margin-top: 20px;
+      }
+
+      p {
+        color: #262626;
+        padding: 30px;
+        margin: 0;
+        font-weight: 300;
+        line-height: 24px;
+      }
+
+      p > b {
+        font-weight: 600;
+        display: block;
+        margin-bottom: 15px;
+      }
+
+      div.card-link {
+        // border-top: 1px solid #cdcdcd;
+        padding: 0 0 30px;
+
+        a {
+          -webkit-font-smoothing: antialiased;
+          display: block;
+          padding: 0 30px;
+          text-decoration: none;
+          text-transform: uppercase;
+          color: #2d58c4;
+          font-weight: bold;
+          font-size: 14px;
+        }
+
+        a:hover {
+          color: darken(#2d58c4, 20%);
+        }
+      }
+    }
+  }
+
+  .card-img-container:hover .card-img {
+    background-size: 175%;
+  }
+}
+
+.container-squad {
+  align-items: unset;
+  div.card {
+    height: auto;
+    div.card-body {
+      height: auto;
+    }
+  }
+}

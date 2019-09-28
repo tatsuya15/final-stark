@@ -1,0 +1,79 @@
+.container-squad {
+  .card {
+    background-color: $cardColor;
+    box-shadow: 10px 2px 22px 2px rgba(0, 0, 0, 0.45);
+    transition: 0.45s ease all;
+    overflow: hidden;
+
+    .card-body {
+      padding: 1.25rem 0;
+    }
+
+    &:hover {
+      .card-img {
+        background-size: 200%;
+      }
+    }
+
+    .card-img {
+      transition: 0.45s ease all;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: url(https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/zz70403f67.jpg);
+      background-position: center center;
+      background-size: 150%;
+      height: 280px;
+      padding: 30px;
+      color: white;
+    }
+  }
+  h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 8px 10px;
+    width: 100%;
+    background: rgba(45, 52, 54, 0.7);
+    text-align: left;
+    -webkit-font-smoothing: antialiased;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+}
+
+.squad-member {
+  
+  li {
+    padding: 4px 10px;
+    list-style-type: none;
+  }
+
+  .row-user {
+    transition: 0.45s ease all;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 10px 2px 22px 2px rgba(0, 0, 0, 0.45);
+      transform: scale(1.05);
+    }
+  }
+
+  .picture {
+    display: inline-block;
+    height: 50px;
+    width: 40px;
+    margin-right: 1em;
+    background-size: cover;
+    border-radius: 10%;
+  }
+  .data {
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: 0.9em;
+    vertical-align: top;
+    .role {
+      font-weight: bold;
+    }
+  }
+}

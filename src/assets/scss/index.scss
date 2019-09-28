@@ -12,6 +12,8 @@
 @import "elements/_navbar";
 @import "elements/_mediaPrint";
 @import "elements/_select";
+@import "elements/_squadCard";
+@import "elements/_teamCard";
 
 body {
   //background: url('../images/bg-ironman.jpg');
@@ -19,9 +21,15 @@ body {
   color: $white;
 }
 
+a {
+  color: $eggBlue;
+}
+
 h1 {
   border-bottom: 1px solid $borderElt;
   padding: 15px 0;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 //TEMP

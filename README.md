@@ -88,3 +88,27 @@ C --> D
 
 react-draft-wysiwyg
 react-multiselect-checkboxes
+
+## FEATURES TO DEVELOP
+
+### LAYOUT
+Fix login page
+Display user account on side bar
+Update sidebar layout
+CMDB graphic
+
+### DATA
+VICE & VERSA 
+WAX
+FILTER USERS BY TEAM / SQUAD
+
+### USER DETAIL PAGE
+Add ID CASTMEMBER
+Add START DATE
+DISPLAY PERIOD 
+    -> DISPLAY RED ALERT IF > 3 YEARS
+    -> DISPLAY ORANGE ALERT IF CLOSED 3 YEARS (4 months) 
+
+### LICENSE MANAGEMENT
+### HARDWARE MANAGEMENT
+### TESTING : BUSINESS RULES MANAGEMENT

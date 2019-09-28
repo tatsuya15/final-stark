@@ -46,7 +46,9 @@ class Applications extends Component {
                                         <th scope="col">Title</th>
                                         <th scope="col">Type</th>
                                         <th scope="col">Server</th>
+                                        <th scope="col">Prod url</th>
                                         <th scope="col">App. Owner</th>
+                                        <th scope="col">Supplier</th>
                                         <th scope="col">GDPR</th>
                                         <th scope="col">Status</th>
                                     </tr>

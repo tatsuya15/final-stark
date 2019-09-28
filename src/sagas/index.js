@@ -4,6 +4,7 @@ import * as application from './application';
 import * as user from './user';
 import * as auth from './auth';
 import * as commonData from './commonData';
+import * as organization from './organization';
 
 export default function* rootSaga() {
     yield all([
@@ -11,6 +12,7 @@ export default function* rootSaga() {
         application.watcherApplication(),
         user.watcherUser(),
         auth.watcherAuthentication(),
-        commonData.watcherCommonData()
+        commonData.watcherCommonData(),
+        organization.watcherOrganization()
     ]);
 };

@@ -7,6 +7,7 @@ import CANCEL_SVG from '../../assets/images/svg/back-arrow.svg';
 import EDIT_SVG from '../../assets/images/svg/edit.svg';
 import ARROW_DOWN_SVG from '../../assets/images/svg/arrow_down.svg';
 import { ID_PRODUCT_MANAGER } from '../../constants/config';
+import Select from 'react-select';
 
 
 class ApplicationLine extends Component {
@@ -14,7 +15,7 @@ class ApplicationLine extends Component {
     constructor(props) {
         super(props);
 
-        const { idproject, projectTitle, projectType, data, statusTitle, color, GDPR, description, serverTitle, users } = this.props.data;
+        const { idproject, projectTitle, projectType, data, statusTitle, color, GDPR, description, serverTitle, users, applinks } = props.data;
 
         this.state = {
             isEdited: false,
@@ -27,7 +28,8 @@ class ApplicationLine extends Component {
             GDPR,
             description,
             serverTitle,
-            users
+            users,
+            applinks
         }
     }
 
@@ -77,7 +79,7 @@ class ApplicationLine extends Component {
     }
 
     render() {
-        const { idproject, projectTitle, description, projectType, data, statusTitle, color, GDPR, serverTitle, users } = this.state;
+        const { idproject, projectTitle, description, projectType, data, statusTitle, color, GDPR, serverTitle, users, applinks } = this.state;
         const isGDPR = GDPR === 1 ? <img className="icon-grid" src={GDPR_SVG} alt="GDPR" /> : null;
 
         let styleCss = {
@@ -88,13 +90,26 @@ class ApplicationLine extends Component {
 
         if (!this.state.isEdited) {
 
-            const fields = data.split(';');
-            const GDPR_data = fields.map((field, i) => {
-                return (<li className="list-group-item bg-dark" key={i}>{field}</li>)
-            });
+            let GDPR_data = null;
+            if (data !== null) {
+                const fields = data.split(';');
+                GDPR_data = fields.map((field, i) => {
+                    return (<li className="list-group-item bg-dark" key={i}>{field}</li>)
+                });
+            }
 
-            const productManager = users.find(user => user.idRole = ID_PRODUCT_MANAGER );
+            const productManager = users.find(user => user.idRole = ID_PRODUCT_MANAGER);
             const PO_name = productManager ? `${productManager.firstname} ${productManager.lastname}` : '???';
+            
+            //console.log("link :", applinks);
+            let url_prod = '';
+            const link_prod = applinks.find(applink => applink.environmenttypes_idenvironmenttype === 4);
+
+            console.log('test fch', link_prod);
+
+            if (link_prod !== undefined) {
+                url_prod = link_prod.url !== undefined ? <a href={link_prod.url} target="_blank">PROD</a> : '';
+            }
 
             return (
                 //READ MODE
@@ -108,7 +123,9 @@ class ApplicationLine extends Component {
                         <td>{projectTitle}</td>
                         <td>{projectType}</td>
                         <td>{serverTitle}</td>
+                        <td>{url_prod}</td>
                         <td>{PO_name}</td>
+                        <td></td>
                         <td>{isGDPR}</td>
                         <td style={styleCss}>{statusTitle}</td>
                     </tr>
@@ -119,6 +136,8 @@ class ApplicationLine extends Component {
                                 <div className="col-9">
                                     <h6>Description</h6>
                                     <p>{this.props.data.description}</p>
+                                    <h6>Server title</h6>
+                                    <p>{serverTitle}</p>
                                 </div>
                                 <div className="col-3">
                                     <div className="card bg-dark">
@@ -138,11 +157,6 @@ class ApplicationLine extends Component {
 
         } else {
 
-            const fields = data.split(';');
-            const GDPR_data = fields.map((field, i) => {
-                return (<li className="list-group-item bg-dark"><input type="checkbox" name="GDPR_data" /><label htmlFor="GDRP_data">{field}</label></li>)
-            });
-
             return (
                 //EDIT MODE
                 <React.Fragment>
@@ -153,7 +167,7 @@ class ApplicationLine extends Component {
                         </td>
                         <td>{idproject}</td>
                         <td><input onChange={this.handleChange} type="text" value={projectTitle} name={`projectTitle_${idproject}`} /></td>
-                        <td>{projectType}</td>
+                        <td></td>
                         <td>TODO</td>
                         <td>
                             <select name={`GDPR_${idproject}`} value={GDPR}>
@@ -176,7 +190,7 @@ class ApplicationLine extends Component {
                                         <div className="card-header bg-secondary">
                                             GDPR fields
                                         </div>
-                                        <ul>{GDPR_data}</ul>
+                                        <ul></ul>
                                     </div>
                                 </div>
                             </div>
