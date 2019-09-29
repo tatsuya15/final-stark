@@ -20,8 +20,8 @@ class Squads extends Component {
                 ) : (
                     <div className="row container-squad">
                         {this.props.squads.map((squad, key) => (
-                            <div className="col-lg-3 col-sm-12">
-                                <SquadCard key={key} data={squad} />
+                            <div className="col-lg-3 col-sm-12" key={key}>
+                                <SquadCard data={squad} />
                             </div>
                         ))}
                     </div>

@@ -19,8 +19,8 @@ class Team extends Component {
                         <h1 className="main">{this.props.team.title}</h1>
                         <div className="row container-team">
                             {this.props.team.subteams.map((subteam, key) => (
-                                <div className="col-lg-4 col-sm-12">
-                                    <TeamCard key={key} data={subteam} />
+                                <div key={key} className="col-lg-4 col-sm-12">
+                                    <TeamCard data={subteam} />
                                 </div>
                             ))}
                         </div>

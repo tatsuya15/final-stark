@@ -11,6 +11,7 @@ import BusinessRules from './BusinessRules';
 
 import Users from './Users';
 import User from './Users/User';
+import Gantt from './Gantt';
 
 import Error404 from './404';
 import PrivateRoute from '../components/routes/PrivateRoute';
@@ -30,7 +31,7 @@ class App extends Component {
 		return (
 			<Provider store={store}>
 				<ConnectedRouter history={history}>
-					<div className="App router-container">
+					<div className="App main-panel">
 						<Switch>
 							<Route exact path="/" component={Login} />
 							<PrivateRoute path="/home" component={Home} />
@@ -39,6 +40,7 @@ class App extends Component {
 							<PrivateRoute path="/team" component={Team} />
 							<PrivateRoute path="/users" component={Users} />
 							<PrivateRoute path="/user" component={User} />
+							<PrivateRoute path="/gantt" component={Gantt} />
 
 							<PrivateRoute path="/businessRules" component={BusinessRules} />
 
