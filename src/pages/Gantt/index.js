@@ -48,7 +48,7 @@ class Gantt extends Component {
                             <li className="permanent" style={{ "grid-column": "1/49", "background-color": "#e84393" }}>Suppliers missions extension</li>
 
                             <li className="permanent" style={{ "grid-column": "1/49", "background-color": "#74b9ff" }}>Internal tools development support</li>
-                            <li className="permanent" style={{ "grid-column": "1/49", "background-color": "#74b9ff" }}>Lincenses management</li>
+                            <li className="permanent" style={{ "grid-column": "1/49", "background-color": "#74b9ff" }}>Licenses management</li>
 
                         </ul>
                     </div>

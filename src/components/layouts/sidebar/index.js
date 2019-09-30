@@ -37,7 +37,7 @@ const menus = [
         group: 'Web Mastering',
         links: [
             {
-                title: 'applications management',
+                title: 'applications',
                 route: 'applications',
                 icon: 'icon-application',
                 authorization: ['webmaster']
@@ -48,7 +48,7 @@ const menus = [
         group: 'Testing',
         links: [
             {
-                title: 'Business rules management',
+                title: 'Business rules',
                 route: 'businessRules',
                 icon: 'icon-rule',
                 authorization: ['tester']
@@ -59,13 +59,13 @@ const menus = [
         group: 'Administration',
         links: [
             {
-                title: 'users management',
+                title: 'users',
                 route: 'users',
                 icon: 'icon-users',
                 authorization: ['admin']
             },
             {
-                title: 'licenses management',
+                title: 'licenses',
                 route: 'licenses',
                 icon: 'icon-license',
                 authorization: ['admin']

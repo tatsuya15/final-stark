@@ -16,10 +16,10 @@
 .gantt__row--months {
   .gantt__row-first,
   span {
-    background: $draculaOrchid;
+    background: $eyeNewt;
   }
   &.gantt__row:nth-child(odd) .gantt__row-first {
-    background: $draculaOrchid !important;
+    background: $eyeNewt !important;
   }
   .gantt__row-first {
       padding-top: 20px;
